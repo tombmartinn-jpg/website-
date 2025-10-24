@@ -1,0 +1,227 @@
+diff --git a/web/index.html b/web/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..59a7213e1314284ac1499d550b3451c6e70187bd
+--- /dev/null
++++ b/web/index.html
+@@ -0,0 +1,221 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>GMA Market Hub</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="assets/styles.css" />
++  </head>
++  <body>
++    <header class="site-header">
++      <div class="container">
++        <div class="brand">
++          <span class="brand__icon" aria-hidden="true">🛒</span>
++          <span class="brand__name">GMA Market Hub</span>
++        </div>
++        <nav class="site-nav" aria-label="Primary navigation">
++          <a href="#marketplace">Marketplace</a>
++          <a href="#how-it-works">How it works</a>
++          <a href="#testimonials">Testimonials</a>
++          <a href="#contact">Contact</a>
++        </nav>
++        <button class="cta-button">Start Selling</button>
++      </div>
++    </header>
++
++    <main>
++      <section class="hero">
++        <div class="container hero__content">
++          <div class="hero__text">
++            <h1>Discover, buy, and sell goods in one vibrant marketplace.</h1>
++            <p>
++              GMA Market Hub connects creators, growers, and makers with conscious
++              consumers. Explore curated collections from sustainable vendors and
++              support local entrepreneurship.
++            </p>
++            <div class="hero__actions">
++              <a class="cta-button" href="#marketplace">Browse Products</a>
++              <a class="ghost-button" href="#signup">Become a Vendor</a>
++            </div>
++            <ul class="hero__stats" aria-label="Marketplace statistics">
++              <li><strong>120+</strong> independent vendors</li>
++              <li><strong>1.5k</strong> verified buyers</li>
++              <li><strong>98%</strong> positive feedback</li>
++            </ul>
++          </div>
++          <div class="hero__illustration" aria-hidden="true">
++            <div class="hero__card">
++              <span class="hero__card-title">Top Seller</span>
++              <strong>Fresh Orchard Basket</strong>
++              <span>Today only • 20% off</span>
++            </div>
++            <div class="hero__card hero__card--secondary">
++              <span class="hero__card-title">New Vendor Spotlight</span>
++              <strong>Handcrafted Ceramics</strong>
++              <span>Ships in eco-friendly packaging</span>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section id="marketplace" class="marketplace">
++        <div class="container">
++          <div class="section-heading">
++            <h2>Marketplace</h2>
++            <p>Shop curated products from trusted vendors.</p>
++          </div>
++
++          <div class="marketplace__controls" aria-label="Marketplace filters">
++            <div class="filter-group">
++              <label for="category-filter">Category</label>
++              <select id="category-filter">
++                <option value="all">All</option>
++                <option value="produce">Fresh Produce</option>
++                <option value="wellness">Wellness</option>
++                <option value="crafts">Art &amp; Crafts</option>
++                <option value="home">Home Essentials</option>
++              </select>
++            </div>
++
++            <div class="filter-group">
++              <label class="sr-only" for="search-input">Search products</label>
++              <input
++                id="search-input"
++                type="search"
++                placeholder="Search for items or vendors"
++                autocomplete="off"
++              />
++            </div>
++
++            <button id="clear-filters" class="ghost-button">Clear Filters</button>
++          </div>
++
++          <div class="marketplace__grid" id="product-grid" role="list"></div>
++
++          <aside class="cart" aria-labelledby="cart-heading">
++            <h3 id="cart-heading">Cart</h3>
++            <ul id="cart-items" class="cart__items"></ul>
++            <div class="cart__summary">
++              <span>Total</span>
++              <strong id="cart-total">$0.00</strong>
++            </div>
++            <button class="cta-button" id="checkout-button">Proceed to Checkout</button>
++          </aside>
++        </div>
++      </section>
++
++      <section id="how-it-works" class="info-section">
++        <div class="container info-section__grid">
++          <div>
++            <h2>How it works</h2>
++            <ol class="steps">
++              <li>
++                <strong>Create your storefront.</strong>
++                Vendors upload products, set fulfillment preferences, and share their
++                story.
++              </li>
++              <li>
++                <strong>Connect with buyers.</strong>
++                Shoppers browse curated collections, chat with vendors, and build
++                wishlists.
++              </li>
++              <li>
++                <strong>Fulfill orders seamlessly.</strong>
++                Integrated shipping options and automated notifications keep everyone
++                informed.
++              </li>
++            </ol>
++          </div>
++          <div class="card">
++            <h3>Vendor benefits</h3>
++            <ul class="checklist">
++              <li>Custom storefront and analytics dashboard</li>
++              <li>Secure payments with instant payouts</li>
++              <li>Customer messaging and review management</li>
++              <li>Marketing boosts during seasonal events</li>
++            </ul>
++          </div>
++        </div>
++      </section>
++
++      <section id="testimonials" class="testimonials">
++        <div class="container">
++          <h2>Loved by shoppers and creators</h2>
++          <div class="testimonials__grid">
++            <figure class="testimonial">
++              <blockquote>
++                “GMA Market Hub helped me reach new customers without sacrificing my
++                brand values.”
++              </blockquote>
++              <figcaption>
++                <strong>Maya Thompson</strong>
++                Founder, Bloom &amp; Root Wellness
++              </figcaption>
++            </figure>
++            <figure class="testimonial">
++              <blockquote>
++                “The product discovery experience is so smooth. I’ve replaced my
++                weekly grocery haul with marketplace finds.”
++              </blockquote>
++              <figcaption>
++                <strong>Jordan Lee</strong>
++                Verified Buyer
++              </figcaption>
++            </figure>
++            <figure class="testimonial">
++              <blockquote>
++                “Incredible support team! They guided me through launching my first
++                handcrafted collection.”
++              </blockquote>
++              <figcaption>
++                <strong>Sofia Ramirez</strong>
++                Owner, Clay &amp; Co.
++              </figcaption>
++            </figure>
++          </div>
++        </div>
++      </section>
++
++      <section id="signup" class="cta-section">
++        <div class="container">
++          <div class="cta-section__content">
++            <h2>Ready to showcase your products?</h2>
++            <p>
++              Join the marketplace today and gain access to engaged shoppers, seller
++              tools, and curated marketing support.
++            </p>
++          </div>
++          <form class="cta-section__form" aria-label="Vendor sign-up">
++            <label class="sr-only" for="vendor-email">Email</label>
++            <input id="vendor-email" type="email" placeholder="you@example.com" required />
++            <button type="submit" class="cta-button">Request Invite</button>
++          </form>
++        </div>
++      </section>
++    </main>
++
++    <footer id="contact" class="site-footer">
++      <div class="container">
++        <div>
++          <span class="brand__icon" aria-hidden="true">🛍️</span>
++          <span class="brand__name">GMA Market Hub</span>
++          <p class="site-footer__tagline">Empowering local commerce through delightful digital experiences.</p>
++        </div>
++        <div class="site-footer__links">
++          <a href="mailto:hello@gmamarket.com">hello@gmamarket.com</a>
++          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
++          <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
++        </div>
++        <p class="site-footer__copyright">© <span id="year"></span> GMA Market Hub. All rights reserved.</p>
++      </div>
++    </footer>
++
++    <script src="assets/script.js"></script>
++  </body>
++</html>
